@@ -12,10 +12,10 @@ import Link from 'next/link';
 import { ArrowLeft, Trophy, TrendingUp } from 'lucide-react';
 
 const categoryColors = {
-  prosjekt: 'bg-blue-100 text-blue-800',
-  funksjonalitet: 'bg-green-100 text-green-800',
-  forbedring: 'bg-yellow-100 text-yellow-800',
-  annet: 'bg-gray-100 text-gray-800',
+  prosjekt: 'bg-[#015945] text-white',
+  funksjonalitet: 'bg-[#02A67F] text-white',
+  forbedring: 'bg-[#7BEFB2] text-[#015945]',
+  annet: 'bg-[#C4F2DA] text-[#015945]',
 };
 
 const categoryLabels = {
@@ -40,26 +40,26 @@ export default function ResultsPage() {
   const totalVotes = items.reduce((sum, item) => sum + item.votes, 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-[#F7F5F4] to-[#C4F2DA]">
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         <header className="mb-12">
           <Link href="/">
-            <Button variant="ghost" size="sm" className="mb-6 gap-2">
+            <Button variant="ghost" size="sm" className="mb-6 gap-2 text-[#015945] hover:bg-[#C4F2DA]">
               <ArrowLeft className="h-4 w-4" />
               Tilbake til avstemming
             </Button>
           </Link>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl mb-4">
+            <h1 className="text-4xl font-bold tracking-tight text-[#015945] sm:text-5xl mb-4">
               Resultater
             </h1>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-[#247360] max-w-2xl mx-auto">
               Her ser du hva brukerne ønsker seg mest. Resultatene oppdateres i sanntid.
             </p>
           </div>
         </header>
 
-        <Separator className="mb-8" />
+        <Separator className="mb-8 bg-[#C4F2DA]" />
 
         {/* Statistics */}
         <div className="grid gap-6 md:grid-cols-3 mb-8">
@@ -105,15 +105,15 @@ export default function ResultsPage() {
                     <div className="flex items-start gap-4 flex-1">
                       {index < 3 && (
                         <div className={`flex items-center justify-center w-8 h-8 rounded-full ${
-                          index === 0 ? 'bg-yellow-100 text-yellow-700' :
-                          index === 1 ? 'bg-gray-100 text-gray-700' :
-                          'bg-orange-100 text-orange-700'
+                          index === 0 ? 'bg-[#015945] text-white' :
+                          index === 1 ? 'bg-[#02A67F] text-white' :
+                          'bg-[#7BEFB2] text-[#015945]'
                         } font-bold text-sm`}>
                           {index + 1}
                         </div>
                       )}
                       {index >= 3 && (
-                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 text-slate-600 font-medium text-sm">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#C4F2DA] text-[#015945] font-medium text-sm">
                           {index + 1}
                         </div>
                       )}
@@ -144,7 +144,7 @@ export default function ResultsPage() {
         </div>
 
         {items.length === 0 && (
-          <div className="text-center py-12 text-slate-500">
+          <div className="text-center py-12 text-[#247360]">
             Ingen stemmer registrert ennå.
           </div>
         )}

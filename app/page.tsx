@@ -42,19 +42,19 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-[#F7F5F4] to-[#C4F2DA]">
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl mb-4">
+          <h1 className="text-4xl font-bold tracking-tight text-[#015945] sm:text-5xl mb-4">
             Avstemming
           </h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-[#247360] max-w-2xl mx-auto">
             Stem på prosjekter og funksjonalitet du ønsker å se i plattformen.
             Din stemme hjelper oss å prioritere hva vi skal jobbe med.
           </p>
           <div className="mt-6">
             <Link href="/resultater">
-              <Button variant="outline" size="lg" className="gap-2">
+              <Button variant="outline" size="lg" className="gap-2 border-[#015945] text-[#015945] hover:bg-[#015945] hover:text-white">
                 <BarChart3 className="h-4 w-4" />
                 Se resultater
               </Button>
@@ -62,7 +62,7 @@ export default function Home() {
           </div>
         </header>
 
-        <Separator className="mb-8" />
+        <Separator className="mb-8 bg-[#C4F2DA]" />
 
         {/* Category filter */}
         <div className="mb-8">
@@ -73,8 +73,8 @@ export default function Home() {
                 onClick={() => setSelectedCategory(cat.value)}
                 className={`cursor-pointer px-4 py-2 text-sm transition-all ${
                   selectedCategory === cat.value
-                    ? 'bg-slate-900 text-white hover:bg-slate-800'
-                    : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                    ? 'bg-[#015945] text-white hover:bg-[#002920]'
+                    : 'bg-white text-[#015945] hover:bg-[#C4F2DA] border border-[#C4F2DA]'
                 }`}
                 variant="outline"
               >
@@ -97,7 +97,7 @@ export default function Home() {
         </div>
 
         {filteredItems.length === 0 && (
-          <div className="text-center py-12 text-slate-500">
+          <div className="text-center py-12 text-[#247360]">
             Ingen items i denne kategorien ennå.
           </div>
         )}

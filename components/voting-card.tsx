@@ -13,10 +13,10 @@ interface VotingCardProps {
 }
 
 const categoryColors = {
-  prosjekt: 'bg-blue-100 text-blue-800 hover:bg-blue-200',
-  funksjonalitet: 'bg-green-100 text-green-800 hover:bg-green-200',
-  forbedring: 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200',
-  annet: 'bg-gray-100 text-gray-800 hover:bg-gray-200',
+  prosjekt: 'bg-[#015945] text-white hover:bg-[#002920]',
+  funksjonalitet: 'bg-[#02A67F] text-white hover:bg-[#247360]',
+  forbedring: 'bg-[#7BEFB2] text-[#015945] hover:bg-[#C4F2DA]',
+  annet: 'bg-[#C4F2DA] text-[#015945] hover:bg-[#F7F5F4]',
 };
 
 const categoryLabels = {
